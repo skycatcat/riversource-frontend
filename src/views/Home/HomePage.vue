@@ -467,6 +467,12 @@ export default {
 .stat-item {
     text-align: center;
     padding: 2rem 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
 }
 
 .stat-number {

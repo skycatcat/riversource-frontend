@@ -329,6 +329,13 @@ export default {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
     margin: 0 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .timeline-title {

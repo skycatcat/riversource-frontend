@@ -10,11 +10,12 @@
                     <router-link to="/" class="brand-link">
                         <div class="logo">
                             <div class="logo-icon">
-                                <img src="/src/assets/images/河流源头实验室logo.png" alt="实验室logo" width="70" height="70" />
+                                <img src="/src/assets/images/河流源头实验室logo.png" alt="实验室logo" width="80" height="80" />
                             </div>
-                            <div class="brand-text">
+                            <div class="brand-text" v-if="!shouldHideBrandText">
                                 <div class="lab-name">河流源头水生态保护</div>
                                 <div class="lab-subtitle">江西省重点实验室</div>
+                                <div class="lab-english">Jiangxi Provincial Key Laboratory of Water Ecological Conservation at Headwater Regions</div>
                             </div>
                         </div>
                     </router-link>
@@ -52,6 +53,7 @@ export default {
             isScrolled: false,
             isHovered: false,
             mobileMenuOpen: false,
+            shouldHideBrandText: false,
             menuItems: [
                 { name: '首页', path: '/' },
                 { name: '实验室概况', path: '/about' },
@@ -71,9 +73,14 @@ export default {
     },
     mounted() {
         window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('resize', this.checkOverlap)
+        this.$nextTick(() => {
+            this.checkOverlap()
+        })
     },
     beforeUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener('resize', this.checkOverlap)
     },
     methods: {
         handleScroll() {
@@ -90,6 +97,33 @@ export default {
         },
         handleMouseLeave() {
             this.isHovered = false
+        },
+        checkOverlap() {
+            // 在小屏幕直接隐藏
+            if (window.innerWidth <= 820) {
+                this.shouldHideBrandText = true
+                return
+            }
+            
+            this.$nextTick(() => {
+                const navContent = this.$el?.querySelector('.nav-content')
+                const logo = this.$el?.querySelector('.logo')
+                const navMenu = this.$el?.querySelector('.nav-menu')
+                
+                if (navContent && logo && navMenu) {
+                    const contentWidth = navContent.offsetWidth
+                    const logoWidth = logo.offsetWidth
+                    const menuWidth = navMenu.offsetWidth
+                    const gap = 16 // 1rem gap
+                    
+                    // 如果logo宽度 + gap + 菜单宽度 > 容器宽度，就隐藏品牌文字
+                    if (logoWidth + gap + menuWidth > contentWidth) {
+                        this.shouldHideBrandText = true
+                    } else {
+                        this.shouldHideBrandText = false
+                    }
+                }
+            })
         }
     }
 }
@@ -134,18 +168,24 @@ export default {
 
 .navbar {
     padding: 1rem 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .nav-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 2rem 0 3.5rem;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
 }
 
 .nav-brand {
     flex: 0 0 auto;
-    margin-right: auto;
+    min-width: 0;
 }
 
 .nav-brand .brand-link {
@@ -157,6 +197,7 @@ export default {
     display: flex;
     align-items: center;
     gap: 20px;
+    min-width: 0;
 }
 
 .logo-icon {
@@ -166,6 +207,7 @@ export default {
 .brand-text {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .lab-name {
@@ -173,12 +215,23 @@ export default {
     font-weight: 600;
     color: var(--dark-gray);
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 .lab-subtitle {
     font-size: 1rem;
     color: var(--gray);
     line-height: 1.2;
+    white-space: nowrap;
+}
+
+.lab-english {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.2;
+    margin-top: 2px;
+    white-space: nowrap;
+    /* font-style: italic; */
 }
 
 .nav-menu {
@@ -186,13 +239,18 @@ export default {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 2.5rem;
-    flex: 0 0 auto;
-    margin-left: auto;
+    gap: clamp(0.5rem, 3vw - 0.5rem, 2.5rem);
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    max-width: none;
 }
 
 .nav-item {
     position: relative;
+    flex-shrink: 0;
 }
 
 .nav-link {
@@ -203,6 +261,8 @@ export default {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    white-space: nowrap;
+    min-width: max-content;
 }
 
 /* 在首页透明背景时，提供更好的文字对比度 */
@@ -223,6 +283,11 @@ export default {
 
 .header.home-page:not(.scrolled):not(.hovered) .lab-subtitle {
     color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header.home-page:not(.scrolled):not(.hovered) .lab-english {
+    color: rgba(255, 255, 255, 0.8);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -289,9 +354,27 @@ export default {
 }
 
 /* 响应式设计 */
-@media (max-width: 1024px) {
-    .nav-menu {
-        gap: 1.5rem;
+@media (max-width: 1200px) {
+    .nav-content {
+        padding: 0 1.5rem 0 2.5rem;
+    }
+
+    .lab-name {
+        font-size: 1.2rem;
+    }
+
+    .lab-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .lab-english {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-content {
+        padding: 0 1rem 0 1.5rem;
     }
 
     .lab-name {
@@ -301,9 +384,20 @@ export default {
     .lab-subtitle {
         font-size: 0.8rem;
     }
+
+    .lab-english {
+        font-size: 0.65rem;
+    }
 }
 
-@media (max-width: 768px) {
+/* CSS断点作为后备方案 */
+@media (max-width: 900px) {
+    .nav-content {
+        padding: 0 0.75rem 0 1.5rem;
+    }
+}
+
+@media (max-width: 820px) {
     .mobile-menu-btn {
         display: block;
     }
@@ -345,6 +439,10 @@ export default {
 }
 
 @media (max-width: 480px) {
+    .nav-content {
+        padding: 0 0.5rem 0 1rem;
+    }
+    
     .lab-name {
         font-size: 1rem;
     }

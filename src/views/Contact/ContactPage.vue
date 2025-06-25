@@ -222,6 +222,13 @@ export default {
     padding: 1.5rem;
     background: var(--light-gray);
     border-radius: var(--border-radius-lg);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .contact-icon {
