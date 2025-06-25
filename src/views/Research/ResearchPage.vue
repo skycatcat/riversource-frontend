@@ -60,53 +60,57 @@ export default {
             researchAreas: [
                 {
                     id: 1,
-                    title: '水生态修复技术',
-                    description: '专注于河流生态系统的恢复与重建，开发适合江西省水域特点的生态修复技术。',
-                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C8.1 17.5 10.67 12.67 18 11c-2.5-1.5-5-2.5-8-3z"/></svg>',
+                    title: '河流源头矿区典型污染物源解析与评估',
+                    description: '针对河流源头矿区残留浸矿剂的残留量大与释放周期长等科学问题，开展典型污染物的源解析、迁移规律和环境风险评估研究。',
+                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
                     points: [
-                        '河流植被恢复技术',
-                        '水生动物栖息地重建',
-                        '生态护岸工程技术',
-                        '湿地生态系统构建'
+                        '矿区典型污染物识别与来源解析',
+                        '残留浸矿剂释放机理研究',
+                        '污染物环境行为特征分析',
+                        '生态风险评估模型构建',
+                        '污染源头控制技术开发'
                     ],
                     delay: 100
                 },
                 {
                     id: 2,
-                    title: '水质监测与评估',
-                    description: '建立完善的水质监测体系，开发智能化监测设备和评估方法。',
-                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/></svg>',
+                    title: '矿区污染物迁移理论与数值模拟',
+                    description: '构建污染物在复杂地质环境中的迁移转化理论模型，建立高精度数值模拟预测系统，为污染防控提供科学依据。',
+                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>',
                     points: [
-                        '在线水质监测系统',
-                        '多参数同步检测技术',
-                        '水质预警预报模型',
-                        '生态风险评估方法'
+                        '多孔介质中污染物迁移机理',
+                        '地下水-地表水交互作用模拟',
+                        '多相流多组分反应输运模型',
+                        '数值模拟软件开发与应用',
+                        '预测预警系统构建'
                     ],
                     delay: 200
                 },
                 {
                     id: 3,
-                    title: '流域综合治理',
-                    description: '从流域整体角度，制定综合性的水生态保护和治理方案。',
+                    title: '流域污染物的迁移与环境污染防治',
+                    description: '研究流域尺度污染物迁移规律，开发综合性环境污染防治技术体系，实现从源头到末端的全过程污染控制。',
                     icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z"/></svg>',
                     points: [
-                        '流域水文模型构建',
-                        '污染源控制技术',
-                        '生态补水技术',
-                        '流域管理决策支持系统'
+                        '流域污染物迁移路径识别',
+                        '水体自净能力评估与提升',
+                        '生态修复与治理技术',
+                        '污染物削减与控制工程',
+                        '流域综合管理策略制定'
                     ],
                     delay: 300
                 },
                 {
                     id: 4,
-                    title: '生态系统健康评估',
-                    description: '建立科学的生态系统健康评估指标体系和评估方法。',
-                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>',
+                    title: '流域水环境数字孪生与智慧监管',
+                    description: '构建流域水环境数字孪生系统，集成物联网、大数据、人工智能等技术，实现智能化监测预警和科学决策支持。',
+                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/><path d="M6 15.5c0 3.31 2.69 6 6 6s6-2.69 6-6"/></svg>',
                     points: [
-                        '生物多样性评估',
-                        '生态系统服务功能评价',
-                        '环境压力响应分析',
-                        '生态健康诊断技术'
+                        '流域水环境数字孪生平台建设',
+                        '多源数据融合与处理技术',
+                        '智能监测传感器网络部署',
+                        '机器学习预测预警模型',
+                        '决策支持与智慧管理系统'
                     ],
                     delay: 400
                 }
@@ -144,10 +148,10 @@ export default {
 
 <style scoped>
 .page-header {
-    background: var(--gradient-primary);
-    color: var(--white);
-    padding: 120px 0 80px;
-    margin-top: 70px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 120px 0 80px;
+  margin-top: 85px;
 }
 
 .header-content {

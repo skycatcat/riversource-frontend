@@ -221,7 +221,7 @@ export default {
     background: var(--gradient-primary);
     color: var(--white);
     padding: 120px 0 80px;
-    margin-top: 70px;
+    margin-top: 85px;
 }
 
 .header-content {

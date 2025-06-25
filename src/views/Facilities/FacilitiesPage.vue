@@ -58,53 +58,54 @@ export default {
             facilities: [
                 {
                     id: 1,
-                    title: '水质检测实验室',
-                    description: '配备先进的水质分析仪器，可进行多项水质指标的精确检测。',
-                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/></svg>',
+                    title: '实验场地',
+                    description: '拥有3800余平方米实验用房，为科研工作提供充足的物理空间保障。',
+                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>',
                     equipment: [
-                        '原子吸收分光光度计',
-                        '离子色谱仪',
-                        '气相色谱质谱联用仪',
-                        '总有机碳分析仪'
+                        '专业实验室20余间',
+                        '大型仪器设备用房',
+                        '样品前处理室',
+                        '数据分析与处理中心'
                     ],
                     delay: 100
                 },
                 {
                     id: 2,
-                    title: '生物实验室',
-                    description: '开展水生生物多样性研究和生态毒理学实验。',
-                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C8.1 17.5 10.67 12.67 18 11c-2.5-1.5-5-2.5-8-3z"/></svg>',
+                    title: '核心仪器设备',
+                    description: '配备总价值3000万元的先进仪器设备，涵盖水质检测、污染物分析等多个领域。',
+                    icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/></svg>',
                     equipment: [
-                        '倒置显微镜',
-                        '荧光显微镜',
-                        'PCR仪',
-                        '电泳仪'
+                        '显微红外光谱仪',
+                        '电感耦合等离子体发射光谱仪',
+                        '原子荧光光谱仪',
+                        '液相色谱质谱联用仪',
+                        '扫描电子显微镜'
                     ],
                     delay: 200
                 },
                 {
                     id: 3,
-                    title: '环境监测中心',
-                    description: '实时监测水环境质量，建立完善的监测网络。',
+                    title: '监测分析平台',
+                    description: '建立完善的环境监测和污染物分析技术平台，支撑科研和技术服务。',
                     icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>',
                     equipment: [
-                        '在线水质监测仪',
-                        '多参数水质分析仪',
-                        '数据采集系统',
-                        '远程监控平台'
+                        '在线水质监测系统',
+                        '多参数同步检测设备',
+                        '污染物快速检测装置',
+                        '环境样品自动处理系统'
                     ],
                     delay: 300
                 },
                 {
                     id: 4,
-                    title: '数据处理中心',
-                    description: '高性能计算平台，支持大数据分析和模型构建。',
+                    title: '数字化支撑平台',
+                    description: '高性能计算和数据处理平台，支持大数据分析、数值模拟和智能决策。',
                     icon: '<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z" /></svg>',
                     equipment: [
-                        '高性能计算服务器',
-                        '数据存储系统',
-                        '专业分析软件',
-                        '云计算平台'
+                        '高性能计算集群',
+                        '大容量数据存储系统',
+                        '专业数值模拟软件',
+                        '数字孪生开发平台'
                     ],
                     delay: 400
                 }
@@ -142,10 +143,10 @@ export default {
 
 <style scoped>
 .page-header {
-    background: var(--gradient-primary);
-    color: var(--white);
-    padding: 120px 0 80px;
-    margin-top: 70px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 120px 0 80px;
+  margin-top: 85px;
 }
 
 .header-content {

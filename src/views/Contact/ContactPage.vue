@@ -25,8 +25,8 @@
                                     </svg>
                                 </div>
                                 <div class="contact-content">
-                                    <h3>地址</h3>
-                                    <p>江西省南昌市红谷滩新区<br>学府大道999号</p>
+                                  <h3>地址</h3>
+                                  <p>江西理工大学三江校区<br>笃实楼</p>
                                 </div>
                             </div>
 
@@ -181,10 +181,10 @@ export default {
 
 <style scoped>
 .page-header {
-    background: var(--gradient-primary);
-    color: var(--white);
-    padding: 120px 0 80px;
-    margin-top: 70px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 120px 0 80px;
+  margin-top: 85px;
 }
 
 .header-content {

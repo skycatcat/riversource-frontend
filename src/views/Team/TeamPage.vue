@@ -131,39 +131,48 @@ export default {
             coreMembers: [
                 {
                     id: 1,
-                    name: '张伟教授',
+                    name: '王观石教授',
                     title: '实验室主任',
-                    education: '博士，清华大学环境工程',
-                    research: '河流生态修复、水环境治理',
-                    achievements: ['国家杰青', '长江学者', '20+论文'],
+                    education: '博士，中南大学',
+                    research: '矿物加工工程、环境工程',
+                    achievements: ['国家杰青', '长江学者', '50+论文'],
                     delay: 100
                 },
                 {
                     id: 2,
-                    name: '李明副教授',
-                    title: '副主任',
-                    education: '博士，中科院生态环境研究中心',
-                    research: '水质监测技术、环境数据分析',
-                    achievements: ['省优青', '青年拔尖', '15+论文'],
+                    name: '张明义研究员',
+                    title: '柔性引进专家',
+                    education: '博士，中科院',
+                    research: '环境地球化学、污染物迁移',
+                    achievements: ['中科院百人计划', '优秀青年基金', '30+论文'],
                     delay: 200
                 },
                 {
                     id: 3,
-                    name: '王芳研究员',
-                    title: '首席科学家',
-                    education: '博士，北京大学环境科学',
-                    research: '流域生态评估、生物多样性保护',
-                    achievements: ['科技进步奖', '优秀青年', '18+论文'],
+                    name: '刘刚研究员',
+                    title: '柔性引进专家',
+                    education: '博士，清华大学',
+                    research: '水环境修复、生态工程',
+                    achievements: ['科技进步奖', '青年拔尖人才', '25+论文'],
                     delay: 300
                 },
                 {
                     id: 4,
-                    name: '刘华副研究员',
-                    title: '技术负责人',
-                    education: '博士，华中科技大学',
-                    research: '智能监测系统、物联网技术',
-                    achievements: ['技术发明奖', '青年科技奖', '12+论文'],
+                    name: '梁恒教授',
+                    title: '柔性引进专家',
+                    education: '博士，哈尔滨工业大学',
+                    research: '水处理技术、膜分离技术',
+                    achievements: ['国家优青', '青年长江学者', '40+论文'],
                     delay: 400
+                },
+                {
+                    id: 5,
+                    name: '张杰院士',
+                    title: '学术委员会主任',
+                    education: '博士，中国科学院',
+                    research: '环境工程、水污染控制',
+                    achievements: ['中国工程院院士', '国家科技进步奖', '100+论文'],
+                    delay: 500
                 }
             ],
             researchTeams: [
@@ -218,7 +227,7 @@ export default {
     background: var(--gradient-primary);
     color: var(--white);
     padding: 120px 0 80px;
-    margin-top: 70px;
+    margin-top: 85px;
 }
 
 .header-content {

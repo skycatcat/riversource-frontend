@@ -13,7 +13,7 @@
                         <span class="gradient-text">江西省重点实验室</span>
                     </h1>
                     <p class="hero-subtitle">
-                        致力于河流源头水生态系统保护与修复技术研究，推动江西省水生态环境可持续发展
+                        守护生命之源，科技引领绿色发展
                     </p>
                     <div class="hero-actions">
                         <router-link to="/about" class="btn btn-primary">了解更多</router-link>
@@ -106,6 +106,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- 合作伙伴 -->
+        <section class="partners-section py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">合作伙伴</h2>
+                    <p class="section-subtitle">携手共建水生态保护事业</p>
+                </div>
+                <div class="partners-grid">
+                    <div class="partner-item" v-for="partner in partners" :key="partner.id" data-aos="zoom-in"
+                        :data-aos-delay="partner.delay">
+                        <div class="partner-logo">
+                            <div class="logo-placeholder">{{ partner.name }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -147,38 +165,38 @@ export default {
             researchAreas: [
                 {
                     id: 1,
-                    title: '水生态修复',
-                    description: '河流生态系统修复技术研究与应用',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C8.1 17.5 10.67 12.67 18 11c-2.5-1.5-5-2.5-8-3z"/><path d="M3.82 21.34C5.9 16.17 8 10 17 8c3-1.5 6-2.5 7-5-1.5 1.5-4 3-7 5z"/></svg>',
+                    title: '河流源头矿区典型污染物源解析与评估',
+                    description: '针对河流源头矿区残留浸矿剂的残留量大与释放周期长等科学问题进行深入研究',
+                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
                     delay: 100
                 },
                 {
                     id: 2,
-                    title: '水质监测',
-                    description: '先进的水质检测技术与智能监测系统',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/><path d="M6 15.5c0 3.31 2.69 6 6 6s6-2.69 6-6"/></svg>',
+                    title: '矿区污染物迁移理论与数值模拟',
+                    description: '构建污染物在复杂地质环境中的迁移转化理论模型，建立数值模拟预测系统',
+                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>',
                     delay: 200
                 },
                 {
                     id: 3,
-                    title: '流域治理',
-                    description: '综合性流域生态环境治理解决方案',
+                    title: '流域污染物的迁移与环境污染防治',
+                    description: '研究流域尺度污染物迁移规律，开发综合性环境污染防治技术体系',
                     icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z"/></svg>',
                     delay: 300
                 },
                 {
                     id: 4,
-                    title: '生态评估',
-                    description: '水生态系统健康评估与风险预测',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>',
+                    title: '流域水环境数字孪生与智慧监管',
+                    description: '构建流域水环境数字孪生系统，实现智能化监测预警和科学决策支持',
+                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/><path d="M6 15.5c0 3.31 2.69 6 6 6s6-2.69 6-6"/></svg>',
                     delay: 400
                 }
             ],
             stats: [
-                { id: 1, number: '15+', label: '研究项目', delay: 100 },
-                { id: 2, number: '50+', label: '学术论文', delay: 200 },
-                { id: 3, number: '8+', label: '专利技术', delay: 300 },
-                { id: 4, number: '20+', label: '合作伙伴', delay: 400 }
+                { id: 1, number: '150+', label: '承担项目', delay: 100 },
+                { id: 2, number: '8+', label: '省部级科技奖', delay: 200 },
+                { id: 3, number: '50+', label: '授权发明专利', delay: 300 },
+                { id: 4, number: '48', label: '核心研究人员', delay: 400 }
             ],
             latestNews: [
                 {
@@ -202,6 +220,14 @@ export default {
                     date: '2024-06-10',
                     delay: 300
                 }
+            ],
+            partners: [
+                { id: 1, name: '江西省水利厅', delay: 100 },
+                { id: 2, name: '江西省生态环境厅', delay: 200 },
+                { id: 3, name: '中科院赣江创新研究院', delay: 300 },
+                { id: 4, name: '中国稀土集团有限公司', delay: 400 },
+                { id: 5, name: '江西理工大学', delay: 500 },
+                { id: 6, name: '赣州稀土矿业有限公司', delay: 600 }
             ]
         }
     }
@@ -308,8 +334,8 @@ export default {
 .scroll-arrow::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: -3px;
+    bottom: -2px;
+    left: -4px;
     width: 8px;
     height: 8px;
     border: 2px solid var(--white);
@@ -596,3 +622,61 @@ export default {
     }
 }
 </style>
+/* 合作伙伴 */
+.partners-section {
+background: var(--light-gray);
+}
+
+.partners-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 2rem;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.partner-item {
+background: var(--white);
+border-radius: var(--border-radius-lg);
+padding: 2rem 1rem;
+text-align: center;
+box-shadow: var(--shadow-sm);
+transition: var(--transition);
+}
+
+.partner-item:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-md);
+}
+
+.partner-logo {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 80px;
+}
+
+.logo-placeholder {
+color: var(--primary-blue);
+font-weight: 600;
+font-size: 1rem;
+text-align: center;
+line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+.partners-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+}
+
+.partner-item {
+padding: 1.5rem 0.75rem;
+}
+}
+
+@media (max-width: 480px) {
+.partners-grid {
+grid-template-columns: 1fr;
+}
+}

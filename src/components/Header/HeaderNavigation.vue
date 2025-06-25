@@ -1,54 +1,45 @@
 <template>
-    <header class="header" :class="{ 'scrolled': isScrolled }">
+    <header class="header"
+        :class="{ 'scrolled': isScrolled, 'hovered': isHovered, 'home-page': isHomePage, 'non-home': !isHomePage }"
+        @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
         <nav class="navbar">
-            <div class="container">
-                <div class="nav-content">
-                    <!-- Logo区域 -->
-                    <div class="nav-brand">
-                        <router-link to="/" class="brand-link">
-                            <div class="logo">
-                                <div class="logo-icon">
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                        <circle cx="20" cy="20" r="18" fill="url(#gradient1)" />
-                                        <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8c0 2.2-0.9 4.2-2.3 5.7" stroke="white"
-                                            stroke-width="2" fill="none" />
-                                        <circle cx="20" cy="15" r="2" fill="white" />
-                                        <defs>
-                                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color:#0066cc" />
-                                                <stop offset="100%" style="stop-color:#28a745" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div class="brand-text">
-                                    <div class="lab-name">河流源头水生态保护</div>
-                                    <div class="lab-subtitle">江西省重点实验室</div>
-                                </div>
+            <!-- <div class="container"> -->
+            <div class="nav-content">
+                <!-- Logo区域 -->
+                <div class="nav-brand">
+                    <router-link to="/" class="brand-link">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <img src="/src/assets/images/河流源头实验室logo.png" alt="实验室logo" width="70" height="70" />
                             </div>
+                            <div class="brand-text">
+                                <div class="lab-name">河流源头水生态保护</div>
+                                <div class="lab-subtitle">江西省重点实验室</div>
+                            </div>
+                        </div>
+                    </router-link>
+                </div>
+
+                <!-- 桌面导航菜单 -->
+                <ul class="nav-menu" :class="{ 'active': mobileMenuOpen }">
+                    <li class="nav-item" v-for="item in menuItems" :key="item.name">
+                        <router-link :to="item.path" class="nav-link" :class="{ 'active': $route.path === item.path }"
+                            @click="closeMobileMenu">
+                            {{ item.name }}
                         </router-link>
-                    </div>
+                    </li>
+                </ul>
 
-                    <!-- 桌面导航菜单 -->
-                    <ul class="nav-menu" :class="{ 'active': mobileMenuOpen }">
-                        <li class="nav-item" v-for="item in menuItems" :key="item.name">
-                            <router-link :to="item.path" class="nav-link"
-                                :class="{ 'active': $route.path === item.path }" @click="closeMobileMenu">
-                                {{ item.name }}
-                            </router-link>
-                        </li>
-                    </ul>
-
-                    <!-- 移动端菜单按钮 -->
-                    <div class="mobile-menu-btn" @click="toggleMobileMenu">
-                        <span class="hamburger" :class="{ 'active': mobileMenuOpen }">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
+                <!-- 移动端菜单按钮 -->
+                <div class="mobile-menu-btn" @click="toggleMobileMenu">
+                    <span class="hamburger" :class="{ 'active': mobileMenuOpen }">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
                 </div>
             </div>
+            <!-- </div> -->
         </nav>
     </header>
 </template>
@@ -59,6 +50,7 @@ export default {
     data() {
         return {
             isScrolled: false,
+            isHovered: false,
             mobileMenuOpen: false,
             menuItems: [
                 { name: '首页', path: '/' },
@@ -70,6 +62,11 @@ export default {
                 { name: '新闻动态', path: '/news' },
                 { name: '联系我们', path: '/contact' }
             ]
+        }
+    },
+    computed: {
+        isHomePage() {
+            return this.$route.path === '/'
         }
     },
     mounted() {
@@ -87,6 +84,12 @@ export default {
         },
         closeMobileMenu() {
             this.mobileMenuOpen = false
+        },
+        handleMouseEnter() {
+            this.isHovered = true
+        },
+        handleMouseLeave() {
+            this.isHovered = false
         }
     }
 }
@@ -99,25 +102,50 @@ export default {
     left: 0;
     right: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* 非首页默认有背景 */
+.header.non-home {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    transition: var(--transition);
     box-shadow: var(--shadow-sm);
 }
 
-.header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
+/* 首页默认透明 */
+.header.home-page {
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+/* 滚动或悬停时显示背景 */
+.header.scrolled,
+.header.hovered {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
 }
 
+.header.scrolled.hovered {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-lg);
+}
+
 .navbar {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
 }
 
 .nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2rem 0 3.5rem;
+}
+
+.nav-brand {
+    flex: 0 0 auto;
+    margin-right: auto;
 }
 
 .nav-brand .brand-link {
@@ -128,7 +156,7 @@ export default {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
 }
 
 .logo-icon {
@@ -141,14 +169,14 @@ export default {
 }
 
 .lab-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--dark-gray);
     line-height: 1.2;
 }
 
 .lab-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--gray);
     line-height: 1.2;
 }
@@ -158,7 +186,9 @@ export default {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 2rem;
+    gap: 2.5rem;
+    flex: 0 0 auto;
+    margin-left: auto;
 }
 
 .nav-item {
@@ -173,6 +203,31 @@ export default {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+}
+
+/* 在首页透明背景时，提供更好的文字对比度 */
+.header.home-page:not(.scrolled):not(.hovered) .nav-link {
+    color: var(--white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header.home-page:not(.scrolled):not(.hovered) .nav-link:hover,
+.header.home-page:not(.scrolled):not(.hovered) .nav-link.active {
+    color: var(--white);
+}
+
+.header.home-page:not(.scrolled):not(.hovered) .lab-name {
+    color: var(--white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header.home-page:not(.scrolled):not(.hovered) .lab-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header.home-page:not(.scrolled):not(.hovered) .hamburger span {
+    background: var(--white);
 }
 
 .nav-link::after {
@@ -200,6 +255,8 @@ export default {
     display: none;
     cursor: pointer;
     padding: 0.5rem;
+    flex: 0 0 auto;
+    margin-left: auto;
 }
 
 .hamburger {

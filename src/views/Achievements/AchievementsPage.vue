@@ -109,29 +109,29 @@ export default {
             achievementStats: [
                 {
                     id: 1,
-                    number: '45+',
-                    label: '学术论文',
+                    number: '100+',
+                    label: '高水平论文',
                     icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" /></svg>',
                     delay: 100
                 },
                 {
                     id: 2,
-                    number: '12',
-                    label: '发明专利',
+                    number: '50+',
+                    label: '授权发明专利',
                     icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M19,19V5H5V19H19Z" /></svg>',
                     delay: 200
                 },
                 {
                     id: 3,
-                    number: '8',
-                    label: '科技奖项',
+                    number: '8+',
+                    label: '省部级科技奖',
                     icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L13.09,8.26L22,9L17,14L18.18,22.91L12,19.5L5.82,22.91L7,14L2,9L10.91,8.26L12,2Z" /></svg>',
                     delay: 300
                 },
                 {
                     id: 4,
-                    number: '15+',
-                    label: '合作项目',
+                    number: '150+',
+                    label: '承担项目',
                     icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16,4C18.11,4 19.81,5.69 19.81,7.8C19.81,9.91 18.11,11.6 16,11.6C13.89,11.6 12.19,9.91 12.19,7.8C12.19,5.69 13.89,4 16,4M16,13.4C18.67,13.4 24,14.73 24,17.4V20H8V17.4C8,14.73 13.33,13.4 16,13.4M8.5,6.5A2.5,2.5 0 0,1 11,9A2.5,2.5 0 0,1 8.5,11.5A2.5,2.5 0 0,1 6,9A2.5,2.5 0 0,1 8.5,6.5M8.5,13.25C11,13.25 16,14.63 16,17.13V19.75H1V17.13C1,14.63 6,13.25 8.5,13.25Z" /></svg>',
                     delay: 400
                 }
@@ -236,7 +236,7 @@ export default {
     background: var(--gradient-primary);
     color: var(--white);
     padding: 120px 0 80px;
-    margin-top: 70px;
+    margin-top: 85px;
 }
 
 .header-content {
