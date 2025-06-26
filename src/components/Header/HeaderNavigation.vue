@@ -167,7 +167,7 @@ export default {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 0.6rem 0;
     width: 100%;
     max-width: 100vw;
     overflow: hidden;

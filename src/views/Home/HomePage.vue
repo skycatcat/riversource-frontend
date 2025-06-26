@@ -9,11 +9,10 @@
             <div class="container">
                 <div class="hero-content" data-aos="fade-up">
                     <h1 class="hero-title">
-                        河流源头水生态保护
-                        <span class="gradient-text">江西省重点实验室</span>
+                        河流源头水生态保护江西省重点实验室
                     </h1>
                     <p class="hero-subtitle">
-                        守护生命之源，科技引领绿色发展
+                        守护生命之源，更高标准打造美丽中国"江西样板"
                     </p>
                     <div class="hero-actions">
                         <router-link to="/about" class="btn btn-primary">了解更多</router-link>
@@ -26,40 +25,60 @@
             </div>
         </section>
 
-        <!-- 实验室特色 -->
-        <section class="features-section py-5">
+        <!-- 实验室简介 -->
+        <section class="lab-intro py-5" data-aos="fade-up">
             <div class="container">
-                <div class="section-header text-center mb-5" data-aos="fade-up">
-                    <h2 class="section-title">实验室特色</h2>
-                    <p class="section-subtitle">专注水生态保护的科研创新平台</p>
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">实验室简介</h2>
+                    <p class="section-subtitle">赣南地区战略性矿产资源与生态环境协调发展的科技支撑</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card" v-for="feature in features" :key="feature.id" data-aos="fade-up"
-                        :data-aos-delay="feature.delay">
-                        <div class="feature-icon">
-                            <div class="icon-wrapper" v-html="feature.icon"></div>
-                        </div>
-                        <h3 class="feature-title">{{ feature.title }}</h3>
-                        <p class="feature-desc">{{ feature.description }}</p>
+                <div class="intro-content">
+                    <p class="intro-text">
+                        赣南地区是"世界钨都"和"稀土王国"，同时也是赣江、东江等河流源头。基于源区生态环境现状以及产业发展的迫切需求，亟需解决战略性矿产资源开采和流域源头环境污染加剧的矛盾，协同推进降碳、减污、扩绿、增长，全面落实江西省"1269"和"2+6+N"行动计划，为粤港澳大湾区建设及流域生态补偿提供基础资料和决策依据。
+                    </p>
+                    <div class="intro-note">
+                        <em>注：背景图片将使用赣江或东江源头的壮丽航拍图</em>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 研究领域 -->
+        <!-- 核心数据 -->
+        <section class="core-data py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">核心数据</h2>
+                    <p class="section-subtitle">Lab by the Numbers</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item" v-for="stat in coreStats" :key="stat.id" data-aos="fade-up"
+                        :data-aos-delay="stat.delay">
+                        <div class="stat-number">{{ stat.number }}</div>
+                        <div class="stat-label">{{ stat.label }}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 研究方向 -->
         <section class="research-section py-5">
             <div class="container">
                 <div class="section-header text-center mb-5" data-aos="fade-up">
-                    <h2 class="section-title">研究领域</h2>
-                    <p class="section-subtitle">多维度水生态保护研究</p>
+                    <h2 class="section-title">研究方向</h2>
+                    <p class="section-subtitle">Quick Links to Research</p>
                 </div>
                 <div class="research-grid">
-                    <div class="research-item" v-for="research in researchAreas" :key="research.id" data-aos="zoom-in"
+                    <div class="research-card" v-for="research in researchAreas" :key="research.id" data-aos="fade-up"
                         :data-aos-delay="research.delay">
+                        <div class="research-image">
+                            <div class="research-placeholder">
+                                <em>{{ research.imageNote }}</em>
+                            </div>
+                        </div>
                         <div class="research-content">
-                            <div class="research-icon" v-html="research.icon"></div>
                             <h3 class="research-title">{{ research.title }}</h3>
                             <p class="research-desc">{{ research.description }}</p>
+                            <router-link to="/research" class="research-link">了解更多 →</router-link>
                         </div>
                     </div>
                 </div>
@@ -111,7 +130,7 @@
         <section class="partners-section py-5">
             <div class="container">
                 <div class="section-header text-center mb-5" data-aos="fade-up">
-                    <h2 class="section-title">合作伙伴</h2>
+                    <h2 class="section-title">合作单位</h2>
                     <p class="section-subtitle">携手共建水生态保护事业</p>
                 </div>
                 <div class="partners-grid">
@@ -132,63 +151,41 @@ export default {
     name: 'HomePage',
     data() {
         return {
-            features: [
-                {
-                    id: 1,
-                    title: '科研创新',
-                    description: '拥有先进的实验设备和专业的研究团队，在水生态保护领域持续创新',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2l-.5 4h6l-.5-4M12 7v14l3-3v-8m-6 0v8l3 3"/></svg>',
-                    delay: 100
-                },
-                {
-                    id: 2,
-                    title: '产学研结合',
-                    description: '与高校、企业密切合作，推动科研成果转化和产业化应用',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
-                    delay: 200
-                },
-                {
-                    id: 3,
-                    title: '国际合作',
-                    description: '积极开展国际学术交流与合作，引进先进技术和理念',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
-                    delay: 300
-                },
-                {
-                    id: 4,
-                    title: '技术服务',
-                    description: '为政府部门和企事业单位提供专业的水生态技术咨询服务',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
-                    delay: 400
-                }
+            coreStats: [
+                { id: 1, number: '150+', label: '科研项目', delay: 100 },
+                { id: 2, number: '8+', label: '省部级奖励', delay: 200 },
+                { id: 3, number: '50+', label: '授权发明专利', delay: 300 },
+                { id: 4, number: '48', label: '科研团队', delay: 400 },
+                { id: 5, number: '3000万元', label: '设备总值', delay: 500 },
+                { id: 6, number: '3800+', label: '实验场地(m²)', delay: 600 }
             ],
             researchAreas: [
                 {
                     id: 1,
                     title: '河流源头矿区典型污染物源解析与评估',
-                    description: '针对河流源头矿区残留浸矿剂的残留量大与释放周期长等科学问题进行深入研究',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+                    description: '查明残留浸矿剂赋存状态，揭示重金属和放射性元素的活化机制，建立污染物的源汇模型。',
+                    imageNote: '配图：矿区环境或污染物微观图',
                     delay: 100
                 },
                 {
                     id: 2,
                     title: '矿区污染物迁移理论与数值模拟',
-                    description: '构建污染物在复杂地质环境中的迁移转化理论模型，建立数值模拟预测系统',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>',
+                    description: '明确多孔介质水气驱替渗流规律，构建岩土体固-液-气耦合动力学模型，研发大规模数值模拟技术。',
+                    imageNote: '配图：数值模拟效果图或多孔介质示意图',
                     delay: 200
                 },
                 {
                     id: 3,
                     title: '流域污染物的迁移与环境污染防治',
-                    description: '研究流域尺度污染物迁移规律，开发综合性环境污染防治技术体系',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z"/></svg>',
+                    description: '形成入河污染负荷削减技术体系，研发水质净化和生态修复集成技术。',
+                    imageNote: '配图：流域水体或生态修复场景图',
                     delay: 300
                 },
                 {
                     id: 4,
                     title: '流域水环境数字孪生与智慧监管',
-                    description: '构建流域水环境数字孪生系统，实现智能化监测预警和科学决策支持',
-                    icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-5.5 9h11z"/><circle cx="12" cy="15.5" r="2.5"/><path d="M6 15.5c0 3.31 2.69 6 6 6s6-2.69 6-6"/></svg>',
+                    description: '构建流域环境数字孪生平台，实现流域环境智能计算与智慧监管。',
+                    imageNote: '配图：数字孪生平台界面或星空地一体化监测示意图',
                     delay: 400
                 }
             ],
@@ -201,22 +198,22 @@ export default {
             latestNews: [
                 {
                     id: 1,
-                    title: '实验室在河流生态修复技术方面取得重大突破',
-                    excerpt: '近期，我实验室在河流生态修复技术研究方面取得重要进展，相关成果已在国际权威期刊发表...',
+                    title: '[学术交流] XX院士莅临我室指导工作',
+                    excerpt: '院士对实验室在河流源头水生态保护领域的研究成果给予高度评价，并对未来发展方向提出了宝贵建议...',
                     date: '2024-06-20',
                     delay: 100
                 },
                 {
                     id: 2,
-                    title: '国际水生态保护学术研讨会在我实验室成功举办',
-                    excerpt: '来自国内外的知名专家学者齐聚一堂，共同探讨水生态保护的最新理论与实践...',
+                    title: '[科研进展] 我室XX成果荣获202X年度江西省科学技术进步一等奖',
+                    excerpt: '该成果在离子型稀土资源溶浸采矿流场高效调控关键技术及应用方面取得重大突破...',
                     date: '2024-06-15',
                     delay: 200
                 },
                 {
                     id: 3,
-                    title: '实验室与某知名企业签署产学研合作协议',
-                    excerpt: '此次合作将推动水生态保护技术的产业化应用，为江西省生态文明建设贡献力量...',
+                    title: '[通知公告] 202X年度开放基金课题申请指南',
+                    excerpt: '为促进学术交流与合作，实验室现面向国内外学者开放基金课题申请，欢迎相关领域专家积极申报...',
                     date: '2024-06-10',
                     delay: 300
                 }
@@ -344,87 +341,108 @@ export default {
     transform: rotate(45deg);
 }
 
-/* 特色功能 */
-.features-section {
+/* 实验室简介 */
+.lab-intro {
     background: var(--light-gray);
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.feature-card {
-    background: var(--white);
-    padding: 2.5rem 2rem;
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-}
-
-.feature-icon {
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray);
     margin-bottom: 1.5rem;
 }
 
-.icon-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: var(--light-blue);
-    border-radius: 50%;
+.intro-note {
+    padding: 1rem;
+    background: rgba(var(--primary-blue-rgb), 0.1);
+    border-radius: var(--border-radius);
     color: var(--primary-blue);
+    font-size: 0.9rem;
 }
 
-.feature-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--dark-gray);
+/* 核心数据 */
+.core-data {
+    background: var(--white);
 }
 
-.feature-desc {
-    color: var(--gray);
-    line-height: 1.6;
-}
-
-/* 研究领域 */
-.research-grid {
+.core-data .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
 
-.research-item {
-    position: relative;
-    overflow: hidden;
+.core-data .stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--light-gray);
     border-radius: var(--border-radius-lg);
-    background: var(--white);
-    box-shadow: var(--shadow-md);
     transition: var(--transition);
+    cursor: pointer;
 }
 
-.research-item:hover {
+.core-data .stat-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-.research-content {
-    padding: 2rem;
-    text-align: center;
+.core-data .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-blue);
 }
 
-.research-icon {
-    color: var(--primary-green);
-    margin-bottom: 1rem;
+.core-data .stat-label {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+/* 研究方向 */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.research-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.research-image {
+    height: 200px;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    position: relative;
+}
+
+.research-placeholder {
+    text-align: center;
+    font-style: italic;
+    padding: 1rem;
+}
+
+.research-content {
+    padding: 2rem;
 }
 
 .research-title {
@@ -432,11 +450,24 @@ export default {
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--dark-gray);
+    line-height: 1.4;
 }
 
 .research-desc {
     color: var(--gray);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.research-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.research-link:hover {
+    color: var(--secondary-blue);
 }
 
 /* 数据统计 */

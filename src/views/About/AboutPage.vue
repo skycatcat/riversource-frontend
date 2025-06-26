@@ -18,16 +18,13 @@
                         <h2 class="section-title">实验室简介</h2>
                         <div class="intro-description">
                             <p>
-                                河流源头水生态保护江西省重点实验室成立于2018年，是江西省重点建设的科研平台之一。
-                                实验室专注于河流源头水生态系统保护与修复技术研究，致力于为江西省乃至全国的水生态环境保护提供科技支撑。
+                                江西省地处我国东南部，流域发达、水系众多，是鄱阳湖水系、湘江水系、东江水系等众多河流的发源地。与大江大河相比，河流发源地作为典型小流域，其生态环境脆弱性更加显著。赣州市作为江西省面积最大和人口最多的行政区域，是我国著名的革命老区，同时也是我国南方地区重要的生态屏障。赣江、东江等河流均发源于此，其水环境状况不仅影响本地，更关系到广东、香港等地6000多万人口的用水安全。
                             </p>
                             <p>
-                                实验室拥有一支高水平的科研团队，包括教授、副教授、博士后研究人员等，
-                                具备丰富的水生态保护研究经验和先进的实验设备。
+                                赣南地区素有"世界钨都""稀土王国"之称。在矿产资源开采和利用过程中不可避免地对当地生态环境造成了破坏。稀土、钨等开发利用造成土壤和地下水多元污染途径多，原因复杂，控制难度大，已成为制约江西绿色高质量发展的瓶颈。
                             </p>
                             <p>
-                                多年来，实验室在河流生态修复、水质监测、流域治理等领域取得了一系列重要成果，
-                                为江西省生态文明建设做出了重要贡献。
+                                为贯彻落实党的二十大精神和习近平总书记视察江西重要讲话精神，本重点实验室结合我省绿色发展需求与生态文明建设任务，以实现赣江、东江等流域源头水健康循环为目标，开展跨学科创新性应用基础研究，为更高标准打造美丽中国"江西样板"提供科技支撑。
                             </p>
                         </div>
                     </div>
@@ -53,8 +50,8 @@
     <section class="timeline-section py-5">
       <div class="container">
         <div class="section-header text-center mb-5" data-aos="fade-up">
-          <h2 class="section-title">发展历程</h2>
-          <p class="section-subtitle">见证实验室的成长足迹</p>
+          <h2 class="section-title">历史沿革</h2>
+          <p class="section-subtitle">实验室建设与发展历程</p>
         </div>
         <div class="timeline">
           <div class="timeline-item" v-for="item in timeline" :key="item.year" data-aos="fade-up" :data-aos-delay="item.delay">
@@ -68,7 +65,71 @@
       </div>
     </section>
 
-    <!-- 实验室使命与愿景 */
+    <!-- 建设意义 -->
+    <section class="significance-section py-5">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">建设意义</h2>
+          <p class="section-subtitle">推动江西省绿色高质量发展的重要支撑</p>
+        </div>
+        <div class="significance-grid">
+          <div class="significance-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="significance-title">推动有色金属产业链现代化建设</h3>
+            <p class="significance-desc">
+              将绿色矿业理念贯穿于矿产资源开发利用全过程，通过科技引领和技术创新，推动资源利用方式和矿业发展方式根本转变，形成绿色矿业发展格局。
+            </p>
+          </div>
+          <div class="significance-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="significance-title">推动流域生态环境保护和河流源区可持续发展</h3>
+            <p class="significance-desc">
+              把保护和修复流域源头生态环境摆在首要位置，为河流源头流域水质安全保障提供科技支撑，推进泛珠三角区域合作、进而实现源区的可持续发展。
+            </p>
+          </div>
+          <div class="significance-item" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="significance-title">推动地区人才培养和科技创新能力提升</h3>
+            <p class="significance-desc">
+              通过加强"产学研用"合作，为赣南地区的经济发展和生态环境保护提供更好的技术服务，同时通过统筹科技资源，深化赣南地区生态环境保护科技体制改革。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 优势特色 -->
+    <section class="advantages-section py-5">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">优势特色</h2>
+          <p class="section-subtitle">不可替代的独特优势</p>
+        </div>
+        <div class="advantages-content" data-aos="fade-up">
+          <p class="advantages-intro">
+            省内现有相关实验室主要围绕鄱阳湖及其流域的水资源、水环境和水生态以及污染物控制与资源循环利用等领域开展研究工作。本实验室与之相比，具有不可替代的优势与特色：
+          </p>
+          <div class="advantages-grid">
+            <div class="advantage-card" data-aos="zoom-in" data-aos-delay="100">
+              <h4>研究区域的独特性</h4>
+              <p>现有实验室缺少对赣江、东江等河流源头以及东江流域污染防控问题的专门研究。</p>
+            </div>
+            <div class="advantage-card" data-aos="zoom-in" data-aos-delay="200">
+              <h4>研究对象的独特性</h4>
+              <p>现有实验室未涉及到我省的稀土、钨等重要特色战略资源开发利用过程中产生的污染问题。</p>
+            </div>
+            <div class="advantage-card" data-aos="zoom-in" data-aos-delay="300">
+              <h4>依托单位的独特性</h4>
+              <p>江西理工大学位于赣南苏区，区位优势明显、矿冶特色鲜明，被誉为"有色冶金人才摇篮"，在稀土、钨等特色资源开发利用领域具有丰富的技术积累和显著的学科优势。</p>
+            </div>
+          </div>
+          <div class="advantages-conclusion" data-aos="fade-up" data-aos-delay="400">
+            <p>
+              因此，在江西理工大学建设"河流源头水生态保护江西省重点实验室"，可以依托赣南资源优势以及学校区位优势和矿冶特色，直接服务我省"1269"行动计划，对填补赣江、东江等河流源头水污染控制技术的空白，突破稀土、钨矿山生态治理和选冶过程中的污染控制关键技术，具有不可替代的重要意义。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 实验室使命与愿景 -->
     <section class="mission-section py-5">
       <div class="container">
         <div class="mission-grid">
@@ -169,46 +230,28 @@ export default {
         return {
             timeline: [
                 {
-                    year: '2018',
-                    title: '实验室成立',
-                    description: '河流源头水生态保护江西省重点实验室正式成立，开始组建研究团队',
+                    year: '2016',
+                    title: '基础平台建设',
+                    description: '江西省环境岩土与工程灾害控制重点实验室获批建设，为后续实验室重组奠定基础',
                     delay: 100
                 },
                 {
-                    year: '2019',
-                    title: '设备建设',
-                    description: '引进先进的水质检测设备和生态监测系统，完善实验室基础设施',
+                    year: '重组前',
+                    title: '原有规模',
+                    description: '固定人员30人，40岁以下青年骨干19人，博士学位人员18人，实验场地1500m²，仪器设备总值2500万元',
                     delay: 200
                 },
                 {
-                    year: '2020',
-                    title: '首批成果',
-                    description: '在河流生态修复技术方面取得重要突破，发表多篇高质量学术论文',
+                    year: '重组后',
+                    title: '全面升级',
+                    description: '围绕江西省"1269"行动计划重组优化，研究方向聚焦生态环境领域的河流源头水污染控制',
                     delay: 300
                 },
                 {
-                    year: '2021',
-                    title: '产学研合作',
-                    description: '与多家高校和企业建立合作关系，推动科研成果产业化',
+                    year: '现状',
+                    title: '显著提升',
+                    description: '固定人员增至48人，40岁以下青年骨干24人，博士学位人员43人，实验场地扩展至3800m²，仪器设备总值3000万元',
                     delay: 400
-                },
-                {
-                    year: '2022',
-                    title: '技术应用',
-                    description: '多项技术成果在江西省水生态保护项目中成功应用',
-                    delay: 500
-                },
-                {
-                    year: '2023',
-                    title: '国际合作',
-                    description: '与国外知名研究机构建立合作关系，提升国际影响力',
-                    delay: 600
-                },
-                {
-                    year: '2024',
-                    title: '创新发展',
-                    description: '持续推进技术创新，为江西省生态文明建设提供更强支撑',
-                    delay: 700
                 }
             ]
         }
@@ -350,6 +393,109 @@ export default {
     line-height: 1.6;
 }
 
+/* 建设意义 */
+.significance-section {
+    background: var(--white);
+}
+
+.significance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.significance-item {
+    background: var(--light-gray);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.significance-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.significance-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.4;
+}
+
+.significance-desc {
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/* 优势特色 */
+.advantages-section {
+    background: var(--light-gray);
+}
+
+.advantages-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.advantages-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.advantage-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+.advantage-card p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.advantages-conclusion {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.advantages-conclusion p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
 /* 使命愿景 */
 .mission-grid {
     display: grid;
@@ -397,7 +543,7 @@ export default {
 
 /* 组织架构 */
 .organization-section {
-    background: var(--light-gray);
+    background: var(--white);
 }
 
 .org-chart {
