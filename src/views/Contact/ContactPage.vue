@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="contact-content">
                                   <h3>地址</h3>
-                                  <p>江西理工大学三江校区<br>笃实楼</p>
+                                  <p>江西省赣州市客家大道1958号<br>江西理工大学</p>
                                 </div>
                             </div>
 
@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="contact-content">
                                     <h3>电话</h3>
-                                    <p>办公室：0791-88120000<br>实验室：0791-88120001</p>
+                                    <p>联系人：连军锋<br>电话：18870102741</p>
                                 </div>
                             </div>
 
@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="contact-content">
                                     <h3>邮箱</h3>
-                                    <p>办公邮箱：office@riverlab.edu.cn<br>学术邮箱：academic@riverlab.edu.cn</p>
+                                    <p>联系邮箱：lianjf@jxust.edu.cn</p>
                                 </div>
                             </div>
 
@@ -135,7 +135,7 @@
                             <circle cx="12" cy="10" r="3" />
                         </svg>
                         <p>地图位置</p>
-                        <span>江西省南昌市红谷滩新区</span>
+                        <span>江西省赣州市客家大道1958号</span>
                     </div>
                 </div>
             </div>

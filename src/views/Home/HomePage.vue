@@ -289,6 +289,26 @@ export default {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: #ffffff;
+    /* color: transparent; */
+    background: linear-gradient(45deg, #ffffff 60%, #a7d7f9); /* 从白色到淡雅的科技蓝 */
+    -webkit-background-clip: text; /* 兼容 Webkit 浏览器 */
+    background-clip: text;
+    letter-spacing: 2px; /* 增加 2px 的字间距 */
+    /* 依然可以保留一个非常细微的阴影来增强可读性 */
+    /* text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    /* text-shadow: 
+        0 1px 2px rgba(0,0,0,0.2), 
+        0 4px 8px rgba(0,0,0,0.3), 
+        0 10px 20px rgba(0,0,0,0.2);  */
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    
+    /* 或者使用渐变色让标题更突出 */
+    /* background: linear-gradient(135deg, #ffffff 0%, #4CAF50 50%, #2196F3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; */
 }
 
 .gradient-text {
