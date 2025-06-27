@@ -4,7 +4,7 @@
         <section class="page-header">
             <div class="container">
                 <div class="header-content" data-aos="fade-up">
-                    <h1 class="page-title">团队成员</h1>
+                    <h1 class="page-title">科研团队</h1>
                     <p class="page-subtitle">专业的科研团队与技术专家</p>
                 </div>
             </div>

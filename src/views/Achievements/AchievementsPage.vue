@@ -4,7 +4,7 @@
         <section class="page-header">
             <div class="container">
                 <div class="header-content" data-aos="fade-up">
-                    <h1 class="page-title">成果展示</h1>
+                    <h1 class="page-title">科研成果</h1>
                     <p class="page-subtitle">科研创新成果与学术贡献</p>
                 </div>
             </div>

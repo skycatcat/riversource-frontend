@@ -58,9 +58,9 @@ export default {
                 { name: '首页', path: '/' },
                 { name: '实验室概况', path: '/about' },
                 { name: '研究方向', path: '/research' },
-                { name: '成果展示', path: '/achievements' },
-                { name: '团队成员', path: '/team' },
-                { name: '平台条件', path: '/facilities' },
+                { name: '科研成果', path: '/achievements' },
+                { name: '科研团队', path: '/team' },
+                { name: '数据平台', path: '/facilities' },
                 { name: '新闻动态', path: '/news' },
                 { name: '联系我们', path: '/contact' }
             ]
